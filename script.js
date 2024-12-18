@@ -16,9 +16,9 @@ btn.addEventListener( "click", (e) => {
 		localStorage.setItem("userObj", JSON.stringify(userObj));
 		alert("Logged in as.")
 	}else{
-		localStorage.removeItem("userObj");
-
+		localStorage.clear();
 	}
+	
 
 	let obje = JSON.parse(localStorage.getItem("userObj"));
 	if(obje){
