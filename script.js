@@ -11,16 +11,20 @@ btn.addEventListener( "click", (e) => {
 	
 
 	if(checkbox){
-		const userObj = {"username":username, "password":password}
-		localStorage.setItem("userObj", JSON.stringify(userObj));
+		localStorage.setItem("username":username);
+		localStorage.setItem("password":password);
+		
+		// const userObj = {"username":username, "password":password}
+		// localStorage.setItem("userObj", JSON.stringify(userObj));
 		alert("Logged in as.")
 	}else{
-		localStorage.removeItem("userObj");
+		localStorage.removeItem("username");
+		localStorage.removeItem("password");
 	}
 	
 
-	let obje = JSON.parse(localStorage.getItem("userObj"));
-	if(obje != null){
+	
+	if(localStorage.getItem("username") && localStorage.getItem("password")){
 		const existing_button  = document.getElementById("existing")
 		existing_button.style.display = "block"
 	}
@@ -30,6 +34,6 @@ btn.addEventListener( "click", (e) => {
 } );
 
 document.getElementById("existing").addEventListener("click", ()=> {
-	let obje = JSON.parse(localStorage.getItem("userObj"));
-	alert(`Logged in as. ${obje.username} `)
+	
+	alert(`Logged in as. ${localStorage.getItem("username")} `)
 })
