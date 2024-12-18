@@ -8,15 +8,13 @@ btn.addEventListener( "click", (e) => {
 	const username = document.getElementById("username").value;
 	const password = document.getElementById("password").value;
 	const checkbox = document.getElementById("checkbox").checked;
-	console.log(username, password, checkbox);
+	
 
 	if(checkbox){
 		
 		const userObj = {"username":username, "password":password}
 		localStorage.setItem("userObj", JSON.stringify(userObj));
 		alert("Logged in as.")
-	}else{
-		localStorage.clear();
 	}
 	
 
@@ -26,7 +24,7 @@ btn.addEventListener( "click", (e) => {
 		existing_button.style.display = "block"
 		
 	}
-	console.log("obje", obje)
+	
 	
 
 } );
