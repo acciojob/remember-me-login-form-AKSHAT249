@@ -21,7 +21,7 @@ btn.addEventListener( "click", (e) => {
 	
 
 	let obje = JSON.parse(localStorage.getItem("userObj"));
-	if(obje){
+	if(obje != null){
 		const existing_button  = document.getElementById("existing")
 		existing_button.style.display = "block"
 		
