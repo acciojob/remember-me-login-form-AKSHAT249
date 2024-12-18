@@ -11,8 +11,8 @@ btn.addEventListener( "click", (e) => {
 	
 
 	if(checkbox){
-		localStorage.setItem("username":username);
-		localStorage.setItem("password":password);
+		localStorage.setItem("username",username);
+		localStorage.setItem("password",password);
 		
 		// const userObj = {"username":username, "password":password}
 		// localStorage.setItem("userObj", JSON.stringify(userObj));
