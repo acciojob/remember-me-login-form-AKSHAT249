@@ -11,7 +11,7 @@ btn.addEventListener( "click", (e) => {
 	console.log(username, password, checkbox);
 
 	if(checkbox){
-		console.log("remember me checked")
+		
 		const userObj = {"username":username, "password":password}
 		localStorage.setItem("userObj", JSON.stringify(userObj));
 		alert("Logged in as.")
