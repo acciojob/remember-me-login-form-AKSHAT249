@@ -15,6 +15,8 @@ btn.addEventListener( "click", (e) => {
 		const userObj = {"username":username, "password":password}
 		localStorage.setItem("userObj", JSON.stringify(userObj));
 		alert("Logged in as.")
+	}else{
+		localStorage.removeItem("userObj");
 	}
 	
 
@@ -29,8 +31,7 @@ btn.addEventListener( "click", (e) => {
 
 } );
 
-
-
+let obje = JSON.parse(localStorage.getItem("userObj"));
 document.getElementById("existing").addEventListener("click", ()=> {
-	alert("Logged in as.")
+	alert(`Logged in as. ${obje.username} `)
 })
